@@ -22,7 +22,7 @@ safety_settings = [
 # Function to generate content (poem or story)
 def generate_content(prompt):
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(prompt, safety_settings=safety_settings)
         return response.text if response.text else "⚠️ The AI refused to generate a response."
     except Exception as e:
